@@ -64,7 +64,7 @@ namespace LinqQuiz.Tests
             var families = new[] { new Family { ID = 1, PersonArray = new Person[0] } };
 
             var result = Quiz.GetFamilyStatistic(families);
-
+            
             Assert.Single(result);
             Assert.Equal(0, result[0].NumberOfFamilyMembers);
             Assert.Equal(0, result[0].AverageAge);
