@@ -36,8 +36,10 @@ namespace LinqQuiz.Library
         {
             try
             {
+                // Prefer the C# keyword `checked`
                 if (exclusiveUpperLimit < Math.Sqrt(int.MaxValue))
                 {
+                    // Prefer using LINQ's `OrderByDescending` method
                     //Reverse because my solution returns 49, 196 but the test method in Squares.cs requires it to be 196, 49 in order to accept the result
                     int[] result = (from num in Enumerable.Range(1, exclusiveUpperLimit - 1) where (num * num % 7) == 0 select num * num).ToArray();
                     Array.Reverse(result);
